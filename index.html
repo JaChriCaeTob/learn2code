@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Learning Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="background-shape shape-a" aria-hidden="true"></div>
+    <div class="background-shape shape-b" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div>
+        <p class="kicker">Browser-Based Curriculum</p>
+        <h1>JavaScript Learning Lab</h1>
+        <p class="subtitle">
+          Learn in short lessons inspired by MDN and Odin style flow: read a
+          concept, solve a small task, get feedback, and reveal hints only when
+          needed.
+        </p>
+      </div>
+
+      <div class="progress-card">
+        <p id="progress-label">0 / 0 completed</p>
+        <button id="reset-progress" class="ghost">Reset progress</button>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>Lessons</h2>
+        <div id="lesson-nav"></div>
+      </aside>
+
+      <main class="lesson-panel">
+        <section class="card lesson-meta-card">
+          <p id="module-title" class="module-label"></p>
+          <h2 id="lesson-title"></h2>
+          <ul id="objectives" class="objectives"></ul>
+          <div class="lesson-controls">
+            <button id="prev-lesson" class="ghost">Previous</button>
+            <button id="next-lesson" class="ghost">Next</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <h3>Read</h3>
+            <button id="toggle-explanation" class="ghost">
+              Hide explanation
+            </button>
+          </div>
+          <p id="lesson-summary"></p>
+          <div id="lesson-explanation"></div>
+          <ul id="lesson-resources" class="resources"></ul>
+        </section>
+
+        <section class="card">
+          <div class="card-header">
+            <h3>Task</h3>
+            <button id="toggle-hints" class="ghost">Show hints</button>
+          </div>
+          <p id="task-text"></p>
+          <ul id="hints" class="hints hidden"></ul>
+
+          <label for="code-editor">Code editor</label>
+          <textarea id="code-editor" spellcheck="false"></textarea>
+
+          <div class="actions">
+            <button id="run-code">Run code</button>
+            <button id="check-task" class="primary">Check task</button>
+            <button id="reset-code" class="ghost">Reset starter</button>
+          </div>
+        </section>
+
+        <section class="card">
+          <h3>Output</h3>
+          <pre id="output"></pre>
+          <p id="feedback" aria-live="polite"></p>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
