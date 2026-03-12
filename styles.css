@@ -104,6 +104,12 @@ h3 {
   font-weight: 700;
 }
 
+.progress-actions {
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
 .layout {
   max-width: 1160px;
   margin: 0 auto;
@@ -224,6 +230,92 @@ h3 {
   padding-left: 1.05rem;
 }
 
+.quick-sheet {
+  margin: 0.6rem 0 0;
+  padding-left: 1rem;
+}
+
+.quick-sheet li + li {
+  margin-top: 0.35rem;
+}
+
+.quick-sheet code {
+  background: #fff0d8;
+  border: 1px solid #f0cfa8;
+  border-radius: 0.35rem;
+  padding: 0.08rem 0.28rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.88em;
+}
+
+.read-stack p {
+  margin: 0.55rem 0;
+}
+
+h4 {
+  margin: 0.85rem 0 0.4rem;
+}
+
+.syntax-map,
+.guided-steps {
+  margin: 0.35rem 0 0;
+  padding-left: 1rem;
+}
+
+.syntax-map li + li,
+.guided-steps li + li {
+  margin-top: 0.4rem;
+}
+
+.syntax-map li {
+  list-style: none;
+  margin-left: 0;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid #ebd6b8;
+  border-radius: 0.55rem;
+  background: #fff8eb;
+}
+
+.syntax-map code {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.87rem;
+  margin-bottom: 0.25rem;
+  color: #143341;
+}
+
+.syntax-map span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.example-box {
+  margin-top: 0.75rem;
+  border: 1px dashed #d6c1a0;
+  border-radius: 0.7rem;
+  padding: 0.65rem;
+  background: #fff9ed;
+}
+
+.example-box summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.example-box pre {
+  margin-top: 0.7rem;
+}
+
+.example-box p {
+  margin: 0.55rem 0 0;
+  color: var(--muted);
+}
+
+.bonus-box {
+  margin-top: 0.8rem;
+  padding-top: 0.2rem;
+}
+
 .resources a {
   color: var(--support);
 }
@@ -258,6 +350,12 @@ textarea:focus {
   gap: 0.55rem;
   flex-wrap: wrap;
   margin-top: 0.75rem;
+}
+
+.expected-output {
+  margin: 0.65rem 0 0;
+  font-weight: 700;
+  color: #8d3e00;
 }
 
 button {
@@ -299,6 +397,11 @@ pre {
   white-space: pre-wrap;
   word-break: break-word;
   font-family: "IBM Plex Mono", monospace;
+}
+
+#solution {
+  margin-top: 0.8rem;
+  border: 1px solid #304050;
 }
 
 #feedback {

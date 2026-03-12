@@ -21,15 +21,18 @@
         <p class="kicker">Browser-Based Curriculum</p>
         <h1>JavaScript Learning Lab</h1>
         <p class="subtitle">
-          Learn in short lessons inspired by MDN and Odin style flow: read a
-          concept, solve a small task, get feedback, and reveal hints only when
-          needed.
+          Start from zero JavaScript knowledge. Each lesson teaches syntax in
+          plain language, gives tiny tasks, and includes optional hints plus a
+          full solution across chapter-based progression.
         </p>
       </div>
 
       <div class="progress-card">
         <p id="progress-label">0 / 0 completed</p>
-        <button id="reset-progress" class="ghost">Reset progress</button>
+        <div class="progress-actions">
+          <button id="reset-progress" class="ghost">Reset progress</button>
+          <button id="download-progress" class="ghost">Download JSON</button>
+        </div>
       </div>
     </header>
 
@@ -40,6 +43,22 @@
       </aside>
 
       <main class="lesson-panel">
+        <section class="card">
+          <h3>Built-In Quick Sheet</h3>
+          <p>
+            Keep this open while learning. You can complete this course using
+            only these basics.
+          </p>
+          <ul class="quick-sheet">
+            <li><code>console.log("text")</code> prints text to Output.</li>
+            <li><code>const name = "Sam"</code> stores a value that should not change.</li>
+            <li><code>let count = 0</code> stores a value that can change later.</li>
+            <li><code>if (condition) { ... } else { ... }</code> chooses between two paths.</li>
+            <li><code>function greet(name) { return ... }</code> creates reusable code.</li>
+            <li><code>const arr = []</code> makes a list. <code>arr.push("x")</code> adds to the list.</li>
+          </ul>
+        </section>
+
         <section class="card lesson-meta-card">
           <p id="module-title" class="module-label"></p>
           <h2 id="lesson-title"></h2>
@@ -58,8 +77,26 @@
             </button>
           </div>
           <p id="lesson-summary"></p>
-          <div id="lesson-explanation"></div>
-          <ul id="lesson-resources" class="resources"></ul>
+          <div id="explanation-content">
+            <div id="lesson-explanation" class="read-stack"></div>
+
+            <h4>What this syntax means</h4>
+            <ul id="syntax-map" class="syntax-map"></ul>
+
+            <h4>Step-by-step</h4>
+            <ol id="guided-steps" class="guided-steps"></ol>
+
+            <details class="example-box">
+              <summary>Worked example</summary>
+              <pre id="worked-example"></pre>
+              <p id="example-note"></p>
+            </details>
+
+            <div class="bonus-box">
+              <h4>Bonus external references</h4>
+              <ul id="lesson-resources" class="resources"></ul>
+            </div>
+          </div>
         </section>
 
         <section class="card">
@@ -68,6 +105,7 @@
             <button id="toggle-hints" class="ghost">Show hints</button>
           </div>
           <p id="task-text"></p>
+          <p id="expected-output" class="expected-output"></p>
           <ul id="hints" class="hints hidden"></ul>
 
           <label for="code-editor">Code editor</label>
@@ -77,7 +115,10 @@
             <button id="run-code">Run code</button>
             <button id="check-task" class="primary">Check task</button>
             <button id="reset-code" class="ghost">Reset starter</button>
+            <button id="toggle-solution" class="ghost">Show solution</button>
           </div>
+
+          <pre id="solution" class="hidden"></pre>
         </section>
 
         <section class="card">
